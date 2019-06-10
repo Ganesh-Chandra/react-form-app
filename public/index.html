@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+   
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"></link>
+    <title>React App</title>
+    <style>
+    
+    .pgbar {
+            counter-reset: step;
+            
+        }
+
+        .pgbar li {
+            list-style-type: none;
+            float: left;
+            width: 33.33%;
+            position: relative;
+            text-align: center;
+            
+            
+        }
+
+        .pgbar li:before {
+            background-color: white;
+            content: counter(step);
+            counter-increment: step;
+            border: 1px;
+            width: 30px;
+            height: 30px;
+            border-style: solid;
+            border-radius: 50%;
+            display: block;
+            text-align: center;
+            margin: 0 auto 10px auto;
+            line-height: 30px;
+            
+        }
+        .pgbar li:after{
+            content: "";
+            background-color: black;
+            height: 1px;
+            width: 100%;
+            z-index: -1;
+            top: 15px;
+            left: -50%;
+           position: absolute;
+        }
+
+        .pgbar li:nth-child(1)::after{
+           
+            content: none; 
+        }
+        .pgbar .active::before{
+          background-color: skyblue;
+          border-color: skyblue;
+          color: white;
+        }
+        .pgbar .active::after{
+          background-color: skyblue;
+        }
+        </style>
+  </head>
+  <body>
+    
+    <div id="root"></div>
+   
+  </body>
+</html>
