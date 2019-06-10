@@ -1,6 +1,5 @@
 {
-  "homepage": "http://myname.github.io/form-app-react",
-  "name": "react-form-app",
+  "name": "progressbar-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
